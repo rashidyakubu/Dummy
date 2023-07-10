@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Snapshots-Data-Factory"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"Odbc1_connectionString": {
+			"value": ""
+		},
+		"Odbc1_password": {
+			"value": ""
+		},
+		"Odbc1_properties_typeProperties_userName": {
+			"value": "_SYSTEM"
+		},
+		"Shared-IntegrationRuntime_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/91ee285b-72ed-4afb-8425-8910c68b6c5b/resourcegroups/Sandbox-RG/providers/Microsoft.DataFactory/factories/RashidYakubu/integrationruntimes/CoastOnPremiseDataIntegrationRuntime"
+		}
+	}
+}
