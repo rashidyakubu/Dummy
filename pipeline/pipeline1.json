@@ -17,14 +17,35 @@
 				"typeProperties": {
 					"source": {
 						"type": "OdbcSource",
-						"query": "Select *\nfrom SQLUser.Branch\nwhere Code like '1%'",
+						"query": "Select Code, DEscription\nfrom SQLUser.Branch\nwhere Code like '1%'",
 						"queryTimeout": "02:00:00"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureSqlSink",
+						"sqlWriterStoredProcedureName": "[dbo].[BranchInsert_GWTESTONLY_2]",
+						"sqlWriterTableType": "UDTT_Branch_GWTESTONLY_2",
+						"storedProcedureTableTypeParameterName": "BranchT",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "OdbcTable1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
