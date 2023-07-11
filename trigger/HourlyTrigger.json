@@ -1,0 +1,28 @@
+{
+	"name": "HourlyTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"CodePattern": "3%"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2023-07-11T22:00:00Z",
+				"endTime": "2023-07-12T22:00:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
