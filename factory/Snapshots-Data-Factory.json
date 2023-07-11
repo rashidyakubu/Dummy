@@ -1,5 +1,13 @@
 {
 	"name": "Snapshots-Data-Factory",
+	"properties": {
+		"globalParameters": {
+			"Env": {
+				"type": "string",
+				"value": "DEV"
+			}
+		}
+	},
 	"location": "canadacentral",
 	"identity": {
 		"type": "SystemAssigned",
