@@ -51,6 +51,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"CodePattern": {
+				"type": "string",
+				"defaultValue": "1%"
+			}
+		},
 		"annotations": []
 	}
 }
