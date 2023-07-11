@@ -17,7 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "OdbcSource",
-						"query": "Select Code, DEscription\nfrom SQLUser.Branch\nwhere Code like '1%'",
+						"query": {
+							"value": "@concat('Select Code, Description from SQLUser.Branch where Code LIKE \"',pipeline().parameters.CodePattern,'\"')",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00"
 					},
 					"sink": {
